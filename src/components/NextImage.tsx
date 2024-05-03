@@ -1,7 +1,7 @@
 import Image, { ImageProps } from 'next/image';
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
+import { clsxm } from '@/lib/utils';
 
 type NextImageProps = {
   useSkeleton?: boolean;
@@ -42,9 +42,9 @@ export default function NextImage({
       className={className}
     >
       <Image
-        className={cn(
+        className={clsxm(
           classNames?.image,
-          status === 'loading' && cn('animate-pulse', classNames?.blur)
+          status === 'loading' && clsxm('animate-pulse', classNames?.blur)
         )}
         src={src}
         width={width}

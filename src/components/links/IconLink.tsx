@@ -2,7 +2,7 @@ import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
 
-import { cn } from '@/lib/utils';
+import { clsxm } from '@/lib/utils';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -41,7 +41,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       <UnstyledLink
         ref={ref}
         type='button'
-        className={cn(
+        className={clsxm(
           'inline-flex items-center justify-center rounded font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
@@ -88,7 +88,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
         )}
         {...rest}
       >
-        {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
+        {Icon && <Icon size='1em' className={clsxm(classNames?.icon)} />}
       </UnstyledLink>
     );
   }
