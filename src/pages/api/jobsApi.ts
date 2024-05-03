@@ -1,5 +1,5 @@
-import * as detailJobs from 'public/data/detail_jobs.json';
-import * as allJobs from 'public/data/jobs.json';
+import detailJobs from 'public/data/detail_jobs.json';
+import allJobs from 'public/data/jobs.json';
 
 export function getAllJobs() {
   return {
