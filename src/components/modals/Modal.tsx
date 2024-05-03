@@ -93,8 +93,9 @@ export function ModalRoot({
                   <IconButton
                     onClick={() => setOpen(false)}
                     variant='ghost'
+                    size='sm'
                     icon={X}
-                    className='text-typo-icons text-2xl'
+                    iconClassName='text-2xl text-typo-icons'
                   />
                 </header>
                 {children}

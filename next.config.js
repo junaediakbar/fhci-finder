@@ -9,8 +9,12 @@ const nextConfig = {
 
   // Uncoment to add domain whitelist
   images: {
-    protocol: 'https',
-    domains: ['rekrutmenbersama2024.fhcibumn.id'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rekrutmenbersama2024.fhcibumn.id',
+      },
+    ],
   },
 
   // SVGR
