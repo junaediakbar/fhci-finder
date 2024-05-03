@@ -1,7 +1,8 @@
-import { clsxm } from '@/lib/utils';
 import { flexRender, RowData, Table } from '@tanstack/react-table';
 import * as React from 'react';
 import { GoTriangleDown, GoTriangleUp } from 'react-icons/go';
+
+import { clsxm } from '@/lib/utils';
 
 type THeadProps<T extends RowData> = {
   omitSort: boolean;

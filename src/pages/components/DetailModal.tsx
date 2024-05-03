@@ -1,11 +1,12 @@
-import * as React from 'react';
-
-import Button from '@/components/buttons/Button';
-import Modal from '@/components/modals/Modal';
-import Typography from '@/components/typography/Typography';
-import { getJobDetailById } from '@/pages/api/jobsApi';
 import parse from 'html-react-parser';
+import { useState } from 'react';
+
+import Modal from '@/components/modals/Modal';
 import NextImage from '@/components/NextImage';
+import Typography from '@/components/typography/Typography';
+
+import { VacancyDetail } from '@/constant/types';
+import { getJobDetailById } from '@/pages/api/jobsApi';
 
 type ModalReturnType = {
   openModal: (id: string) => void;
@@ -16,8 +17,8 @@ export default function DetailModal({
 }: {
   children: (props: ModalReturnType) => JSX.Element;
 }) {
-  const [open, setOpen] = React.useState(false);
-  const [vacancy, setVacancy] = React.useState<VacancyDetail | null>(null);
+  const [open, setOpen] = useState(false);
+  const [vacancy, setVacancy] = useState<VacancyDetail | null>(null);
 
   const modalReturn: ModalReturnType = {
     openModal: async (id) => {

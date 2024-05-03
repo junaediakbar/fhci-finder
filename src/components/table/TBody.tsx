@@ -1,7 +1,9 @@
-import Typography from '@/components/typography/Typography';
-import { clsxm } from '@/lib/utils';
 import { flexRender, RowData, Table } from '@tanstack/react-table';
 import * as React from 'react';
+
+import { clsxm } from '@/lib/utils';
+
+import Typography from '@/components/typography/Typography';
 
 type TBodyProps<T extends RowData> = {
   isLoading?: boolean;

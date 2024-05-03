@@ -2,9 +2,11 @@ import { Dialog, Transition } from '@headlessui/react';
 import { X } from 'lucide-react';
 import * as React from 'react';
 
+import { clsxm } from '@/lib/utils';
+
 import IconButton from '@/components/buttons/IconButton';
 import Typography from '@/components/typography/Typography';
-import { clsxm } from '@/lib/utils';
+
 import { ExtractProps } from '@/constant/helper';
 
 type ModalProps = {

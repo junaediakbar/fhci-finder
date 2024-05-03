@@ -1,18 +1,16 @@
+import { ColumnDef } from '@tanstack/react-table';
+import { EyeIcon } from 'lucide-react';
 import * as React from 'react';
 
+import IconButton from '@/components/buttons/IconButton';
 import Layout from '@/components/layout/Layout';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
-import { getAllJobs } from '@/pages/api/jobsApi';
-import { ColumnDef } from '@tanstack/react-table';
-import PrimaryLink from '@/components/links/PrimaryLink';
-import ArrowLink from '@/components/links/ArrowLink';
 import Table from '@/components/table/Table';
-import Button from '@/components/buttons/Button';
-import Modal from '@/components/modals/Modal';
+
+import { Vacancy } from '@/constant/types';
+import { getAllJobs } from '@/pages/api/jobsApi';
 import DetailModal from '@/pages/components/DetailModal';
-import IconButton from '@/components/buttons/IconButton';
-import { EyeIcon } from 'lucide-react';
 
 export default function HomePage() {
   const [jobs, setJobs] = React.useState<Vacancy[]>([]);

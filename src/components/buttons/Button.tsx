@@ -1,6 +1,7 @@
-import { clsxm } from '@/lib/utils';
 import { Loader2, LucideIcon } from 'lucide-react';
 import * as React from 'react';
+
+import { clsxm } from '@/lib/utils';
 
 const ButtonVariant = [
   'primary',

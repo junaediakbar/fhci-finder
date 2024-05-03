@@ -8,10 +8,11 @@ import {
 } from '@tanstack/react-table';
 import * as React from 'react';
 
+import { clsxm } from '@/lib/utils';
+
 import Filter from '@/components/table/Filter';
 import TBody from '@/components/table/TBody';
 import THead from '@/components/table/THead';
-import { clsxm } from '@/lib/utils';
 
 type TableProps<T extends object> = {
   data: T[];

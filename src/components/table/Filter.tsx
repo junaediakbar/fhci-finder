@@ -1,8 +1,9 @@
-import { clsxm } from '@/lib/utils';
 import { RowData, Table } from '@tanstack/react-table';
 import clsx from 'clsx';
 import { Search, XCircle } from 'lucide-react';
 import * as React from 'react';
+
+import { clsxm } from '@/lib/utils';
 
 type FilterProps<T extends RowData> = {
   table: Table<T>;

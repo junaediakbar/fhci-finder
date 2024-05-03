@@ -1,4 +1,4 @@
-declare type Vacancy = {
+export declare type Vacancy = {
   vacancy_id: string | null;
   tenant_id: string | null;
   vacancy_name: string | null;
@@ -29,7 +29,7 @@ declare type Vacancy = {
   major_non_sma_custom: string | null;
 };
 
-declare type VacancyDetail = {
+export declare type VacancyDetail = {
   vacancy_id: string;
   tenant_name: string;
   no_ig: string | undefined;

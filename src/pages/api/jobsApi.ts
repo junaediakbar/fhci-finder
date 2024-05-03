@@ -1,5 +1,5 @@
-import * as allJobs from 'public/data/jobs.json';
 import * as detailJobs from 'public/data/detail_jobs.json';
+import * as allJobs from 'public/data/jobs.json';
 
 export function getAllJobs() {
   return {
@@ -30,8 +30,7 @@ export async function getJobDetailById(id: string) {
     return {
       status: 500,
       data: data,
-      // @ts-ignore
-      message: e.toString(),
+      message: "Can't get data",
     };
   }
 }
