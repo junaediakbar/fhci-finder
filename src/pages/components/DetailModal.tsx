@@ -12,22 +12,26 @@ type ModalReturnType = {
   openModal: (id: string) => void;
 };
 
-export default function DetailModal({
+import dynamic from 'next/dynamic';
+
+function DetailModal({
   children,
 }: {
   children: (props: ModalReturnType) => JSX.Element;
+  id: string;
 }) {
   const [open, setOpen] = useState(false);
-  const [vacancy, setVacancy] = useState<VacancyDetail | null>(null);
+  const [detailJob, setDetailJob] = useState<VacancyDetail | null>(null);
 
   const modalReturn: ModalReturnType = {
     openModal: async (id) => {
       setOpen(true);
+      const res = await getJobDetailById(id);
 
-      if (id != null) {
-        const detail = getJobDetailById(id);
-        setVacancy((await detail).data as VacancyDetail);
+      if (res.data === undefined || res.data === null) {
+        return;
       }
+      setDetailJob(res?.data as VacancyDetail);
     },
   };
 
@@ -38,13 +42,13 @@ export default function DetailModal({
   return (
     <>
       {children(modalReturn)}
-      <Modal open={open} setOpen={setOpen} title={vacancy?.vacancy_name}>
+      <Modal open={open} setOpen={setOpen} title={detailJob?.vacancy_name}>
         <Modal.Section className='mb-6'>
           <div className='flex flex-row justify-between'>
             <div>
-              <Typography variant='h4'>{vacancy?.tenant_name}</Typography>
+              <Typography variant='h4'>{detailJob?.tenant_name}</Typography>
               <Typography variant='b2'>
-                {vacancy?.job_function} - Kuota: {vacancy?.quota}
+                {detailJob?.job_function} - Kuota: {detailJob?.quota}
               </Typography>
             </div>
             <div>
@@ -53,8 +57,8 @@ export default function DetailModal({
                 width={130}
                 height={130}
                 src={getImageCompanyUrl(
-                  vacancy?.logo as string,
-                  vacancy?.no_ig as string
+                  detailJob?.logo as string,
+                  detailJob?.no_ig as string
                 )}
                 alt='logo'
               ></NextImage>
@@ -63,17 +67,21 @@ export default function DetailModal({
           <Typography variant='h5' className='mt-6'>
             Deskripsi Pekerjaan
           </Typography>
-          {vacancy?.vacancy_description && (
-            <div>{parse(vacancy?.vacancy_description)}</div>
+          {detailJob?.vacancy_description && (
+            <div>{parse(detailJob?.vacancy_description)}</div>
           )}
           <Typography variant='h5' className='mt-6'>
             Persyaratan
           </Typography>
-          {vacancy?.vacancy_requirements && (
-            <div>{parse(vacancy?.vacancy_requirements)}</div>
+          {detailJob?.vacancy_requirements && (
+            <div>{parse(detailJob?.vacancy_requirements)}</div>
           )}
         </Modal.Section>
       </Modal>
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(DetailModal), {
+  ssr: false,
+});

@@ -12,8 +12,7 @@ import { Vacancy } from '@/constant/types';
 import { getAllJobs } from '@/pages/api/jobsApi';
 import DetailModal from '@/pages/components/DetailModal';
 
-export default function HomePage() {
-  const [jobs, setJobs] = React.useState<Vacancy[]>([]);
+export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
   const columns: ColumnDef<Vacancy>[] = [
     {
       accessorKey: 'no',
@@ -37,7 +36,7 @@ export default function HomePage() {
       header: 'Detail',
       cell: (data) => {
         return (
-          <DetailModal>
+          <DetailModal id={data.getValue() as string}>
             {({ openModal }) => (
               <IconButton
                 icon={EyeIcon}
@@ -55,10 +54,6 @@ export default function HomePage() {
     },
   ];
 
-  React.useEffect(() => {
-    const data = getAllJobs().data;
-    setJobs(data);
-  }, []);
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
@@ -72,7 +67,7 @@ export default function HomePage() {
 
               <Table
                 columns={columns}
-                data={jobs}
+                data={listJob}
                 className='mt-4'
                 omitSort
                 withFilter
@@ -89,4 +84,15 @@ export default function HomePage() {
       </main>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const res = await getAllJobs();
+  const listJob = res.data;
+  return {
+    props: {
+      listJob,
+    },
+    revalidate: 60 * 60 * 24,
+  };
 }

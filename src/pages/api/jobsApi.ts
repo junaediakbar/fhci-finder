@@ -1,12 +1,12 @@
 import detailJobs from 'public/data/detail_jobs.json';
 import allJobs from 'public/data/jobs.json';
 
-export function getAllJobs() {
-  return {
+export async function getAllJobs() {
+  return await Promise.resolve({
     status: 200,
     data: allJobs,
     message: 'Success get data',
-  };
+  });
 }
 
 export async function getJobDetailById(id: string) {
@@ -20,17 +20,16 @@ export async function getJobDetailById(id: string) {
         message: 'Vacancy not found',
       };
     }
-    return {
+    return Promise.resolve({
       status: 200,
       data: data,
       message: 'Success get data',
-    };
+    });
   } catch (e) {
-    alert(e);
-    return {
+    return Promise.resolve({
       status: 500,
       data: data,
       message: "Can't get data",
-    };
+    });
   }
 }
