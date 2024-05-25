@@ -11,6 +11,7 @@
 
 This repository is 🔋 battery packed with:
 
+- Used starter template made by <a href="https://theodorusclarence.com">Clarence</a>
 - ⚡️ Next.js 13
 - ⚛️ React 18
 - ✨ TypeScript
