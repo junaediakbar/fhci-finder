@@ -10,7 +10,7 @@
 ## Features
 
 This repository is 🔋 battery packed with:
-- Used starter template made by <a href="https://theodorusclarence">Clarence</a>
+
 - ⚡️ Next.js 13
 - ⚛️ React 18
 - ✨ TypeScript
