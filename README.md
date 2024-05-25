@@ -3,14 +3,14 @@
 <div align="center">
   <h2>🛰️ FHCI Job Finder</h2>
   <p>Find Job and description in BUMN's recruitment website.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Junaedi Akbar</a></p>
+  <p>Made by <a href="https://junaediakbar.com">Junaedi Akbar</a></p>
 
 </div>
 
 ## Features
 
 This repository is 🔋 battery packed with:
-
+- Used starter template made by <a href="https://theodorusclarence">Clarence</a>
 - ⚡️ Next.js 13
 - ⚛️ React 18
 - ✨ TypeScript
