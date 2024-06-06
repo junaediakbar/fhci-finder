@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import IconButton from '@/components/buttons/IconButton';
 import Layout from '@/components/layout/Layout';
+import ArrowLink from '@/components/links/ArrowLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 import Table from '@/components/table/Table';
@@ -63,7 +64,10 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
         <section className='bg-white'>
           <div className='layout flex-colpy-12 r relative flex min-h-screen'>
             <div className='layout min-h-screen py-20'>
-              <h1 className='mt-2'>FHCI BUMN Jobs Table</h1>
+              <div>
+                <h1 className='mb-3 mt-2'>FHCI BUMN Jobs Table</h1>
+                <ArrowLink href='/count-score'>Hitung Skor</ArrowLink>
+              </div>
 
               <Table
                 columns={columns}

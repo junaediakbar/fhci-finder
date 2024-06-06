@@ -5,16 +5,16 @@
 :root {
   /* #region  /**=========== Primary Color =========== */
   /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
-  --tw-color-primary-50: 240 249 255;
-  --tw-color-primary-100: 224 242 254;
-  --tw-color-primary-200: 186 230 253;
-  --tw-color-primary-300: 125 211 252;
-  --tw-color-primary-400: 56 189 248;
-  --tw-color-primary-500: 14 165 233;
-  --tw-color-primary-600: 2 132 199;
-  --tw-color-primary-700: 3 105 161;
-  --tw-color-primary-800: 7 89 133;
-  --tw-color-primary-900: 12 74 110;
+  --tw-color-primary-50: 255 241 242;
+  --tw-color-primary-100: 255 227 229;
+  --tw-color-primary-200: 254 204 208;
+  --tw-color-primary-300: 253 164 171;
+  --tw-color-primary-400: 250 113 126;
+  --tw-color-primary-500: 242 65 85;
+  --tw-color-primary-600: 223 32 61;
+  --tw-color-primary-700: 188 22 49;
+  --tw-color-primary-800: 157 22 47;
+  --tw-color-primary-900: 133 23 46;
   --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
   --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
   --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
@@ -42,7 +42,7 @@
   }
 
   .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
+    cursor: url('/images/click.png') 10 10, pointer;
   }
 
   /* #region  /**=========== Typography =========== */
