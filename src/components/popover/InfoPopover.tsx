@@ -8,7 +8,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/popover/PopOver';
+} from '@/components/popover/Popover';
 
 import { ExtractProps } from '@/constant/helper';
 
