@@ -1,5 +1,5 @@
 export declare type Vacancy = {
-  vacancy_id: string | null;
+  vacancy_id: string;
   tenant_id: string | null;
   vacancy_name: string | null;
   tenant_name: string | null;
