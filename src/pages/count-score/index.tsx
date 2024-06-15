@@ -75,10 +75,10 @@ export default function CountScore() {
 
   useEffect(() => {
     if (scoreEnglishTestGrad != undefined && scoreEnglishTestGrad > 0) {
-      if (scoreEnglishTestGrad > 675) {
+      if (scoreEnglishTestGrad > 677) {
         methodsGrad.setValue('tbi_convert', 100);
       } else {
-        const score = Number(((scoreEnglishTestGrad * 100) / 675).toFixed(2));
+        const score = Number(((scoreEnglishTestGrad * 100) / 677).toFixed(2));
         methodsGrad.setValue('tbi_convert', score);
       }
     }
@@ -167,7 +167,7 @@ export default function CountScore() {
                       type='number'
                       id='tbi'
                       label='Skor TBI (Tes Bahasa Inggris)'
-                      placeholder='310-675'
+                      placeholder='310-677'
                       validation={{ required: 'Skor TBI must be filled' }}
                     />
                     <Input
@@ -177,7 +177,7 @@ export default function CountScore() {
                         isShow: true,
                         children: (
                           <Typography className='p-2' variant='b3'>
-                            Konversi bahasa inggris = Nilai bahasa inggris / 675
+                            Konversi bahasa inggris = Nilai bahasa inggris / 677
                             x 100
                           </Typography>
                         ),
