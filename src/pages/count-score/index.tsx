@@ -160,14 +160,14 @@ export default function CountScore() {
                     placeholder='0-100'
                     validation={{ required: 'Skor AKHLAK must be filled' }}
                   />
-                  <div className='flex w-full flex-row justify-between space-x-3'>
+                  <div className='flex w-full flex-row items-end justify-between space-x-3'>
                     <Input
                       containerClassName='w-full'
                       className='w-full'
                       type='number'
                       id='tbi'
                       label='Skor TBI (Tes Bahasa Inggris)'
-                      placeholder='310-677'
+                      placeholder='310-675'
                       validation={{ required: 'Skor TBI must be filled' }}
                     />
                     <Input
@@ -190,7 +190,7 @@ export default function CountScore() {
                       validation={{ required: 'Skor TBI must be filled' }}
                     />
                   </div>
-                  <div className='flex w-full flex-row justify-between space-x-3'>
+                  <div className='flex w-full flex-row items-end justify-between space-x-3'>
                     <Input
                       containerClassName='w-full'
                       type='number'
@@ -218,6 +218,9 @@ export default function CountScore() {
                       id='learning_agility_convert'
                       label='Konversi Skor LA'
                       placeholder='0-100'
+                      validation={{
+                        required: 'Skor Learning Agility must be filled',
+                      }}
                     />
                   </div>
 
@@ -312,6 +315,9 @@ export default function CountScore() {
                       id='learning_agility_sma_convert'
                       label='Konversi Skor LA'
                       placeholder='0-100'
+                      validation={{
+                        required: 'Skor Learning Agility must be filled',
+                      }}
                     />
                   </div>
 

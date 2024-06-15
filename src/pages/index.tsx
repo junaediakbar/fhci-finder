@@ -7,7 +7,7 @@ import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
-import Table from '@/components/table/Table';
+import PaginatedTable from '@/components/table/PaginatedTable';
 
 import { Vacancy } from '@/constant/types';
 import { getAllJobs } from '@/pages/api/jobsApi';
@@ -69,7 +69,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
                 <ArrowLink href='/count-score'>Hitung Skor</ArrowLink>
               </div>
 
-              <Table
+              <PaginatedTable
                 columns={columns}
                 data={listJob}
                 className='mt-4'
@@ -79,7 +79,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
             </div>
             <footer className='absolute bottom-2 mb-4 flex w-full justify-center text-gray-700'>
               © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://junaediakbar.com'>
+              <UnderlineLink className='ml-1' href='https://junaediakbar.com'>
                 Junaedi Akbar
               </UnderlineLink>
             </footer>
