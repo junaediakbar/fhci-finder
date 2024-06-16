@@ -55,6 +55,16 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
     },
   ];
 
+  // React.useEffect(() => {
+  //   listJob.map((v: Vacancy) => {
+  //     if (v.vacancy_name == undefined) {
+  //       console.log('ID', v.vacancy_id);
+  //     } else {
+  //       console.log('NAMED', v.vacancy_name);
+  //     }
+  //   });
+  // }, []);
+
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
@@ -71,7 +81,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
 
               <PaginatedTable
                 columns={columns}
-                data={listJob}
+                data={listJob == undefined ? listJob : []}
                 className='mt-4'
                 omitSort
                 withFilter
