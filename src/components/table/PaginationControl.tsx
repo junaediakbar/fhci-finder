@@ -56,7 +56,7 @@ export default function PaginationControl<T extends RowData>({
             variant='ghost'
             size='sm'
             className={clsxm(
-              currentPage === page && 'bg-primary-400',
+              currentPage === page && 'bg-primary-400text-white',
               'min-w-[2rem]'
             )}
             onClick={() => handlePageControlClick(page)}

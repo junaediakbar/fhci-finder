@@ -12,6 +12,8 @@ import PaginatedTable from '@/components/table/PaginatedTable';
 import { Vacancy } from '@/constant/types';
 import { getAllJobs } from '@/pages/api/jobsApi';
 import DetailModal from '@/pages/components/DetailModal';
+// import TypographyAlert from '@/components/alert/TypographyAlert';
+// import { clsxm } from '@/lib/utils';
 
 export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
   const columns: ColumnDef<Vacancy>[] = [
@@ -64,6 +66,25 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
         <section className='bg-white'>
           <div className='layout flex-colpy-12 r relative flex min-h-screen'>
             <div className='layout min-h-screen py-20'>
+              {/* <TypographyAlert
+                className={clsxm([
+                  showTag ? 'flex' : 'hidden',
+                  'mb-4 cursor-pointer transition-all delay-150 duration-300 ease-in-out',
+                  ,
+                ])}
+                variant='success'
+                leftIcon={InfoIcon}
+                onClick={() => {
+                  console.log('CLICKED');
+                  setShowTag(false);
+                }}
+              >
+                <p>Update!</p>
+                <ul className='list-inside list-disc'>
+                  <li>Menambahkan detail yang masih kosong-</li>
+                  <li>Fix data tidak ditemukan</li>
+                </ul>
+              </TypographyAlert> */}
               <div>
                 <h1 className='mb-3 mt-2'>FHCI BUMN Jobs Table</h1>
                 <ArrowLink href='/count-score'>Hitung Skor</ArrowLink>
