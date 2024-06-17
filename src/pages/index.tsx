@@ -62,7 +62,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
       {/* <Seo templateTitle='Home' /> */}
       <Seo
         title='FHCI Finder'
-        description='Mencari detail, kuota, deskripsi, and lainnya dari lowongan pada Rekrutmen BUMN 2024'
+        description='Mencari detail, persyaratan, kuota, deskripsi, and lainnya dari lowongan pada Rekrutmen BUMN 2024'
       />
 
       <main>
