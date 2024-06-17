@@ -60,7 +60,10 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
-      <Seo />
+      <Seo
+        title='FHCI Finder'
+        description='Mencari detail, kuota, deskripsi, and lainnya dari lowongan pada Rekrutmen BUMN 2024'
+      />
 
       <main>
         <section className='bg-white'>

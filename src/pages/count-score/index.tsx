@@ -125,7 +125,10 @@ export default function CountScore() {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
-      <Seo />
+      <Seo
+        title='FHCI Finder | Count Score'
+        description='Menghitung Skor Akhir pada Tahap I dan II dalam FHCI Rekrutmen BUMN 2024'
+      />
       <main>
         <section className='bg-white'>
           <div className='layout relative flex min-h-screen flex-col py-12'>
