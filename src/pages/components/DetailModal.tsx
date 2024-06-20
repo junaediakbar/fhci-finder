@@ -12,7 +12,10 @@ type ModalReturnType = {
   openModal: (id: string) => void;
 };
 
+import { MapPinIcon } from 'lucide-react';
 import dynamic from 'next/dynamic';
+
+import Tag from '@/components/tag/Tag';
 
 function DetailModal({
   children,
@@ -76,6 +79,27 @@ function DetailModal({
           {detailJob?.vacancy_requirements && (
             <div>{parse(detailJob?.vacancy_requirements)}</div>
           )}
+
+          {detailJob?.list_province_text &&
+            detailJob?.list_province_text.length != null && (
+              <div className=''>
+                <Typography variant='h5' className='mb-2 mt-6'>
+                  Provinsi Penempatan
+                </Typography>
+                {JSON.parse(detailJob?.list_province_text).map(
+                  (province: string) => (
+                    <Tag
+                      key={province}
+                      color='primary'
+                      className='mb-2 mr-2'
+                      leftIcon={MapPinIcon}
+                    >
+                      {province}
+                    </Tag>
+                  )
+                )}
+              </div>
+            )}
         </Modal.Section>
       </Modal>
     </>

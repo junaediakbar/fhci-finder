@@ -38,7 +38,7 @@ export declare type VacancyDetail = {
   vacancy_requirements: string;
   vacancy_description: string;
   logo: string | undefined;
-  list_province_text: null;
+  list_province_text: null | string;
   quota: string;
   applied: null;
   job_function: string;
