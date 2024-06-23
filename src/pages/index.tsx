@@ -12,8 +12,6 @@ import PaginatedTable from '@/components/table/PaginatedTable';
 import { Vacancy } from '@/constant/types';
 import { getAllJobs } from '@/pages/api/jobsApi';
 import DetailModal from '@/pages/components/DetailModal';
-// import TypographyAlert from '@/components/alert/TypographyAlert';
-// import { clsxm } from '@/lib/utils';
 
 export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
   const columns: ColumnDef<Vacancy>[] = [
@@ -62,7 +60,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
       {/* <Seo templateTitle='Home' /> */}
       <Seo
         title='FHCI Finder'
-        description='Mencari detail, persyaratan, kuota, deskripsi, and lainnya dari lowongan pada Rekrutmen BUMN 2024'
+        description='Mencari jobdesk detail, persyaratan, kuota, deskripsi, and lainnya dari lowongan pada FHCI Rekrutmen BUMN 2024'
       />
 
       <main>
