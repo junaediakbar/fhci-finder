@@ -9,27 +9,35 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 import PaginatedTable from '@/components/table/PaginatedTable';
 
-import { Vacancy } from '@/constant/types';
+import { VacancyNew } from '@/constant/types';
 import { getAllJobs } from '@/pages/api/jobsApi';
-import DetailModal from '@/pages/components/DetailModal';
+import DetailModalNew from '@/pages/components/DetailModalNew';
 
-export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
-  const columns: ColumnDef<Vacancy>[] = [
+export default function HomePage({
+  listJob: listJob,
+}: {
+  listJob: VacancyNew[];
+}) {
+  const columns: ColumnDef<VacancyNew>[] = [
     {
       accessorKey: 'no',
       header: 'No',
       cell: (info) => info.row.index + 1,
     },
     {
-      accessorKey: 'vacancy_name',
+      accessorKey: 'title',
       header: 'Nama',
     },
     {
-      accessorKey: 'tenant_name',
+      accessorKey: 'company_name',
       header: 'Perusahaan',
     },
     {
-      accessorKey: 'total_job_available',
+      accessorKey: 'employment_status',
+      header: 'Status',
+    },
+    {
+      accessorKey: 'total_quota',
       header: 'Kuota',
     },
     {
@@ -37,7 +45,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
       header: 'Detail',
       cell: (data) => {
         return (
-          <DetailModal id={data.getValue() as string}>
+          <DetailModalNew id={data.getValue() as string}>
             {({ openModal }) => (
               <IconButton
                 icon={EyeIcon}
@@ -49,7 +57,7 @@ export default function HomePage({ listJob: listJob }: { listJob: Vacancy[] }) {
                 Open Modal
               </IconButton>
             )}
-          </DetailModal>
+          </DetailModalNew>
         );
       },
     },

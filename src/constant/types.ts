@@ -63,3 +63,88 @@ export declare type VacancyDetail = {
   highest_age_s2: null;
   lowest_ipk_s2: null;
 };
+
+export declare type VacancyNew = {
+  vacancy_id: string | null;
+  title: string | null;
+  company_name: string | null;
+  total_quota: number | null;
+  show_quota: number | null;
+  stream_id: string | null;
+  stream_name: string | null;
+  employment_status: string | null;
+  selected_job: boolean | null;
+  is_saved: boolean | null;
+  experience_level: string | null;
+};
+
+export interface VacancyDetailNew {
+  vacancy_id: string;
+  title: string;
+  description: string;
+  requirement: string;
+  publication_type: string;
+  company_name: string;
+  total_quota: number;
+  total_applied: number;
+  show_quota: number;
+  placement_region_name: string;
+  stream_name: string;
+  industry_name: string;
+  list_benefit: string;
+  start_date: string;
+  end_date: string;
+  employment_status: string;
+  company_logo: string;
+  private_type: string;
+  experience_level_name: string;
+  experience_level_id: string;
+  selected_job: boolean;
+  is_saved: boolean;
+  qualifications: Qualifications;
+}
+
+export interface Qualifications {
+  salary: Salary;
+  certification: Certification[];
+  skill: string[];
+  major: Major;
+  education_level: EducationLevel[];
+  score: Score;
+  age: Age;
+  gender: string;
+  experience_level: string;
+  min_experience: number;
+}
+
+export interface Salary {
+  salary_min: string;
+  salary_max: number;
+}
+
+export interface Certification {
+  certification_name: string;
+  score_min: string;
+}
+
+export interface Major {
+  major_type: string;
+  major_category: string;
+  list_major: string[];
+}
+
+export interface EducationLevel {
+  education_level: string;
+  age_min: number;
+  age_max: string;
+  score_min: string;
+}
+
+export interface Score {
+  score_min: number | string;
+}
+
+export interface Age {
+  age_min: number | string;
+  age_max: number | string;
+}

@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'rekrutmenbersama2024.fhcibumn.id',
       },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+      },
     ],
   },
 
