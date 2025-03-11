@@ -79,26 +79,26 @@ export declare type VacancyNew = {
 };
 
 export interface VacancyDetailNew {
-  vacancy_id: string;
-  title: string;
-  description: string;
-  requirement: string;
-  publication_type: string;
-  company_name: string;
+  vacancy_id: string | null;
+  title: string | null;
+  description: string | null;
+  requirement: string | null;
+  publication_type: string | null;
+  company_name: string | null;
   total_quota: number;
   total_applied: number;
   show_quota: number;
-  placement_region_name: string;
+  placement_region_name: string | null;
   stream_name: string;
-  industry_name: string;
-  list_benefit: string;
-  start_date: string;
-  end_date: string;
-  employment_status: string;
-  company_logo: string;
-  private_type: string;
-  experience_level_name: string;
-  experience_level_id: string;
+  industry_name: string | null;
+  list_benefit: string | null;
+  start_date: string | null;
+  end_date: string | null;
+  employment_status: string | null;
+  company_logo: string | null;
+  private_type: string | null;
+  experience_level_name: string | null;
+  experience_level_id: string | null;
   selected_job: boolean;
   is_saved: boolean;
   qualifications: Qualifications;
@@ -112,8 +112,8 @@ export interface Qualifications {
   education_level: EducationLevel[];
   score: Score;
   age: Age;
-  gender: string;
-  experience_level: string;
+  gender: string | null;
+  experience_level: string | null;
   min_experience: number;
 }
 
