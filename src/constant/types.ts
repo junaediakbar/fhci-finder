@@ -99,7 +99,7 @@ export interface VacancyDetailNew {
   private_type: string | null;
   experience_level_name: string | null;
   experience_level_id: string | null;
-  selected_job: boolean;
+  selected_job: boolean | null;
   is_saved: boolean;
   qualifications: Qualifications;
 }
@@ -107,44 +107,44 @@ export interface VacancyDetailNew {
 export interface Qualifications {
   salary: Salary;
   certification: Certification[];
-  skill: string[];
+  skill: string[] | null;
   major: Major;
   education_level: EducationLevel[];
   score: Score;
   age: Age;
   gender: string | null;
   experience_level: string | null;
-  min_experience: number;
+  min_experience: number | null;
 }
 
 export interface Salary {
-  salary_min: string;
-  salary_max: number;
+  salary_min: string | number | null;
+  salary_max: number | string | null;
 }
 
 export interface Certification {
-  certification_name: string;
-  score_min: string;
+  certification_name: string | number | null;
+  score_min: string | number | null;
 }
 
 export interface Major {
-  major_type: string;
-  major_category: string;
-  list_major: string[];
+  major_type: string | null;
+  major_category: string | null;
+  list_major: string[] | null;
 }
 
 export interface EducationLevel {
-  education_level: string;
-  age_min: number;
-  age_max: string;
-  score_min: string;
+  education_level: string | null;
+  age_min: number | string | null;
+  age_max: string | number | null;
+  score_min: string | number | null;
 }
 
 export interface Score {
-  score_min: number | string;
+  score_min: number | string | null;
 }
 
 export interface Age {
-  age_min: number | string;
-  age_max: number | string;
+  age_min: number | string | null;
+  age_max: number | string | null;
 }
